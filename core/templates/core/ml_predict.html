@@ -1,0 +1,29 @@
+{% extends 'core/base.html' %}
+{% block title %}ML Prediction{% endblock %}
+{% block content %}
+<div class="card">
+    <h2>Iris Flower Species Predictor</h2>
+    <p class="field-hint">This uses a RandomForest model trained on the classic Iris dataset. Enter the flower's measurements (in cm) to get a real prediction.</p>
+    <form method="post">
+        {% csrf_token %}
+        <label>Sepal Length (cm)</label>
+        <input type="number" step="0.1" name="sepal_length" required>
+        <label>Sepal Width (cm)</label>
+        <input type="number" step="0.1" name="sepal_width" required>
+        <label>Petal Length (cm)</label>
+        <input type="number" step="0.1" name="petal_length" required>
+        <label>Petal Width (cm)</label>
+        <input type="number" step="0.1" name="petal_width" required>
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction %}
+        <div class="prediction-box">
+            Predicted Species: <strong>{{ prediction }}</strong>
+        </div>
+    {% endif %}
+    {% if error %}
+        <div class="errorbox">{{ error }}</div>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,99 @@
+* { box-sizing: border-box; }
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f0f2f5;
+    margin: 0;
+    color: #1c1e21;
+}
+nav {
+    background: #1877f2;
+    padding: 14px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .brand {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+}
+nav .links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 18px;
+    font-size: 15px;
+}
+nav .links a:hover { text-decoration: underline; }
+
+.container {
+    max-width: 640px;
+    margin: 24px auto;
+    padding: 0 16px;
+}
+.card {
+    background: white;
+    border-radius: 8px;
+    padding: 18px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+}
+form textarea, form input[type=text], form input[type=email],
+form input[type=password], form input[type=number] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccd0d5;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+button, .btn {
+    background: #1877f2;
+    color: white;
+    border: none;
+    padding: 9px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: none;
+    display: inline-block;
+}
+button:hover, .btn:hover { background: #145dbf; }
+.btn-danger { background: #e41e3f; }
+.btn-danger:hover { background: #b81732; }
+.post {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+.post:last-child { border-bottom: none; }
+.post-author { font-weight: bold; }
+.post-meta { color: #65676b; font-size: 12px; margin-bottom: 4px; }
+.post-actions a { font-size: 12px; margin-right: 10px; }
+
+.messages { list-style: none; padding: 0; }
+.messages li {
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+.messages .success { background: #d4edda; color: #155724; }
+.messages .error { background: #f8d7da; color: #721c24; }
+
+.prediction-box {
+    background: #e7f3ff;
+    border: 1px solid #1877f2;
+    padding: 14px;
+    border-radius: 6px;
+    margin-top: 14px;
+    font-size: 18px;
+    text-align: center;
+}
+.errorbox {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+.helptext, .field-hint { font-size: 12px; color: #65676b; }
+h2 { margin-top: 0; }
